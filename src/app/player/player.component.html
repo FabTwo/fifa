@@ -1,0 +1,6 @@
+<h2>Wie viele Spieler nehmen an dem Turnier teil?</h2>
+<mat-slider (change)="updateSetting($event)" min="3" max="6" step="1" [value]="playerValue"></mat-slider>
+
+<div *ngIf="playerValue">
+    <span>Spieleranzahl: </span>{{playerValue}}
+</div>
