@@ -6,15 +6,16 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
-import { PlayerInTeamComponent } from './player-in-team/player-in-team.component';
-
 import { PlayersService } from './players.service';
+import { CompetitionComponent } from './competition/competition.component';
+import { PlaymodeComponent } from './playmode/playmode.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerComponent,
-    PlayerInTeamComponent
+    CompetitionComponent,
+    PlaymodeComponent
   ],
   imports: [
     BrowserModule,

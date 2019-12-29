@@ -1,0 +1,12 @@
+<app-player></app-player>
+<app-playmode></app-playmode>
+
+<h3>Die gewählten Einstellungen: </h3>
+
+<div  *ngIf="players">
+    <span>Spieleranzahl: </span>{{players}}
+</div>
+
+<div  *ngIf="playmode">
+    <span>Spielmodus: </span>{{playmode}}
+</div>
