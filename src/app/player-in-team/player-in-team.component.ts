@@ -1,4 +1,6 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { PlayersService } from './../players.service';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-player-in-team',
@@ -7,7 +9,13 @@ import { Component, OnInit, Input} from '@angular/core';
 })
 export class PlayerInTeamComponent implements OnInit {
 
-  constructor() { }
+  get data(): number {
+    return this.playersService.playersValue;
+  }
+  set data(value: number) {
+    this.playersService.playersValue = value;
+  }
+  constructor(private playersService: PlayersService) { }
 
   ngOnInit() {
   }

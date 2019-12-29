@@ -1,3 +1,4 @@
+import { PlayersService } from './../players.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,15 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-  playerValue: any;
 
-  constructor() { }
-
-  ngOnInit() {
+  get data(): number {
+    return this.playersService.playersValue;
+  }
+  set data(value: number) {
+    this.playersService.playersValue = value;
   }
 
-  updateSetting(event) {
-    this.playerValue = event.value;
+  constructor(private playersService: PlayersService) { }
+
+  ngOnInit() {
   }
 
 }
