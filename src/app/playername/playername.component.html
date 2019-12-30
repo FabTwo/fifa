@@ -1,0 +1,39 @@
+<h3>Wie heißen die Spieler?</h3>
+
+<form ngNoForm>
+  <div *ngFor="let item of arrayOne(players); let i = index;">
+    <label>Spieler {{i + 1}}: </label>
+    <input type="text" [(ngModel)]="playername" name="player_{{i}}" placeholder="Spieler {{i + 1}}" />
+  </div>
+</form>
+
+<form #addressForm="ngForm" class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <button type="button" class="btn btn-primary mb-2" (click)="addAddress()">Add Address</button>
+      <section class="container border mb-4 p-3" *ngFor="let address of addresses; let i = index;">
+        <div class="row">
+          <div class="col-6 text-right">
+            <button type="button" class="btn btn-danger btn-sm" (click)="removeAddress(i)">Remove</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label>Address</label>
+              <input type="text" class="form-control" [(ngModel)]="address.address" name="address_{{i}}"
+                placeholder="St. Thomas Apartment" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</form>
+
+<!-- <ul>
+  <li *ngFor="let address of address.address">
+    {{ address }}
+  </li>
+</ul> -->
+

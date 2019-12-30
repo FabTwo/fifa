@@ -1,6 +1,8 @@
 <h3>Wie viele Spieler nehmen an dem Turnier teil?</h3>
-<mat-slider [(ngModel)]="data" min="3" max="6" step="1"></mat-slider>
-
+<mat-slider [(ngModel)]="playernumber" min="3" max="6" step="1"></mat-slider>
+<mat-form-field>
+    <input matInput type="number" placeholder="Spieleranzahl" [(ngModel)]="playernumber" min="3" max="6" step="1">
+  </mat-form-field>
 <!--
 <div  *ngIf="data">
     <span>Spieleranzahl: </span>{{data}}

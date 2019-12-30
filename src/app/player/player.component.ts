@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  get data(): number {
+  get playernumber(): number {
     return this.playersService.playersValue;
   }
-  set data(value: number) {
+  set playernumber(value: number) {
     this.playersService.playersValue = value;
   }
 

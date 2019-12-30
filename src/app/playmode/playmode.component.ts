@@ -8,10 +8,10 @@ import { PlaymodeService } from './../playmode.service';
 })
 export class PlaymodeComponent implements OnInit {
 
-  get data(): number {
+  get playmode(): number {
     return this.playmodeService.playmodeValue;
   }
-  set data(value: number) {
+  set playmode(value: number) {
     this.playmodeService.playmodeValue = value;
   }
 

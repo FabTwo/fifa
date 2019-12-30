@@ -1,12 +1,23 @@
 <app-player></app-player>
+<!-- <app-playername *ngIf="players"></app-playername>
+<app-playmode *ngIf="players && playername"></app-playmode> -->
+<app-playername></app-playername>
 <app-playmode></app-playmode>
 
-<h3>Die gewählten Einstellungen: </h3>
+
+<h4>___________________________________________</h4>
+<h4>Die gewählten Einstellungen: </h4>
 
 <div  *ngIf="players">
     <span>Spieleranzahl: </span>{{players}}
 </div>
 
+<div  *ngIf="playername">
+    <span>Spieler: </span>{{playername}}
+</div>
+
 <div  *ngIf="playmode">
     <span>Spielmodus: </span>{{playmode}}
 </div>
+
+

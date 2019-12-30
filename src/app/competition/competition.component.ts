@@ -1,3 +1,4 @@
+import { PlayernameService } from './../playername.service';
 import { Component, OnInit } from '@angular/core';
 import { PlayersService } from './../players.service';
 import { PlaymodeService } from './../playmode.service';
@@ -16,7 +17,13 @@ export class CompetitionComponent implements OnInit {
   get playmode(): number {
     return this.playmodeService.playmodeValue;
   }
-  constructor(private playersService: PlayersService, private playmodeService: PlaymodeService) { }
+
+  get playername(): any[] {
+    return this.playernameService.playernameArray;
+  }
+  constructor(private playersService: PlayersService,
+              private playmodeService: PlaymodeService,
+              private playernameService: PlayernameService) { }
 
   ngOnInit() {
   }
