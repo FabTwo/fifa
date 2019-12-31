@@ -1,9 +1,7 @@
-<app-player></app-player>
-<!-- <app-playername *ngIf="players"></app-playername>
-<app-playmode *ngIf="players && playername"></app-playmode> -->
-<app-playername></app-playername>
-<app-playmode></app-playmode>
-
+<app-player *ngIf="!playmode"></app-player>
+<app-playmode *ngIf="players && !playername"></app-playmode>
+<app-playername *ngIf="playmode"></app-playername>
+<app-teams *ngIf="playername"></app-teams>
 
 <h4>___________________________________________</h4>
 <h4>Die gewählten Einstellungen: </h4>

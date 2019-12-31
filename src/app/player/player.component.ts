@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  get playernumber(): number {
-    return this.playersService.playersValue;
-  }
   set playernumber(value: number) {
     this.playersService.playersValue = value;
   }
 
+  get playernumber(): number {
+    return this.playersService.playersValue;
+  }
   constructor(private playersService: PlayersService) { }
 
   ngOnInit() {
